@@ -15,40 +15,17 @@ lista.push(cognome)
 
 console.log(lista);
 
-lista.sort();
-
-console.log(lista);
 
 console.log("---------------");
 
 var trovato=false;
-for (var i = 0; i < lista.length &&!trovato; i++) {
+for (var i = 0; i < lista.length; i++) {
 
+  console.log(lista[i].localeCompare(lista[i+1]));
 
-  if (cognome == lista[0]) {
-    trovato= true
-    console.log("E' in posizione 0"+ " Posizione umana 1")
-
-  }
-  else if (cognome == lista[1]) {
-    trovato= true
-    console.log("E' in posizione 1"+ " Posizione umana 2")
+  if (lista[0].localeCompare(lista[1]) == -1) {
+    lista[0] = (lista[1])
 
   }
-  else if (cognome == lista[2]) {
-    trovato= true
-    console.log("E' in posizione 2"+ " Posizione umana 3")
-
-  }
-  else if (cognome == lista[3]) {
-    trovato= true
-    console.log("E' in posizione 3"+ " Posizione umana 4")
-
-  }
-  else if (cognome == lista[4]) {
-    trovato= true
-    console.log("E' in posizione 4"+ " Posizione umana 5")
-
-  }
-
+  console.log(lista);
 }

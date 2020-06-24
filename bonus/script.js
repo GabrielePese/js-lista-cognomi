@@ -9,27 +9,27 @@ var cognome = prompt ("Dimmi il tuo cognome");
 var lista = ["cuni", "stellini", "rossi", "bianchi"];
 
 
-console.log(lista);
 
 lista.push(cognome)
 
-console.log(lista);
 
+lista.sort();
+
+console.log(lista);
 
 console.log("---------------");
 
 var trovato=false;
 for (var i = 0; i < lista.length; i++) {
 
-  console.log(lista[i].localeCompare(lista[i+1]));
+  // console.log(lista[i].localeCompare(lista[i+1]));
 
 
-if ((lista[i].localeCompare(lista[i+1]) == 1)) {
-   lista[i] = (lista[i+1]);
+[lista[0], lista[1], lista[2], lista[3], lista[4]] = [lista[3], lista[0], lista[4], lista[2], lista[1],   ];
 
   console.log(lista);
 }
-}
+
 
 
 // function lista(arr, old_index, new_index) {

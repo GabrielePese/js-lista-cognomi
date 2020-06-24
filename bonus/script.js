@@ -23,9 +23,30 @@ for (var i = 0; i < lista.length; i++) {
 
   console.log(lista[i].localeCompare(lista[i+1]));
 
-  if (lista[0].localeCompare(lista[1]) == -1) {
-    lista[0] = (lista[1])
 
-  }
+if ((lista[i].localeCompare(lista[i+1]) == 1)) {
+   lista[i] = (lista[i+1]);
+
   console.log(lista);
 }
+}
+
+
+// function lista(arr, old_index, new_index) {
+//     if (new_index >= arr.length) {
+//         var i = new_index - arr.length + 1;
+//         while (i--) {
+//             lista.push(undefined);
+//         }
+//     }
+//     lista.splice(new_index, 0, lista.splice(old_index, 1)[0]);
+//     return lista; // for testing
+// };
+//
+// // returns [2, 1, 3]
+// console.log(lista([1, 2, 3], 0, 1));
+//
+// // lista.move()
+// // myArray.move(moveFromPosition, moveToPosition)
+// // var simpleArray = ["Han Solo", "Luke Skywalker", "C3P0", "R2D2"];
+// // simpleArray.move(3, 0);
